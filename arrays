@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main ()
+{
+  int array[3][3];
+  int i,j,*s;
+  int *ptr;
+  printf("enter the elements\n");
+  for(i=0;i<3;i++)
+  {
+      for(j=0;j<3;j++)
+      {
+          scanf("%d",&array[i][j]);
+      }
+  }
+  printf("the values in the array is\n");
+  ptr=array;
+  
+  for(i=0;i<3;i++)
+  {
+      for(j=0;j<3;j++)
+      {
+          printf("\n%d",*ptr);
+          ptr++;
+      }
+  }
+     s=array[0][0]+array[1][1]+array[2][2];
+      printf(" \nthe sum of all diagonal elements is %d",s);
+  
+  return 0;
+}
